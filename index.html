@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zulafa Yahya Wibowo – Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f4;--surface:#fff;--ink:#1f2830;--muted:#5a6672;--line:#d3dae1;--gold:#b8892a;--goldbg:#e9c978;--dark:#1f2830;--ondark:#f3f5f7;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161c22;--surface:#1f2830;--ink:#eef1f4;--muted:#a3afba;--line:#34404b;--gold:#e0b657;--goldbg:#e0b657;--dark:#10151a}}
+:root[data-theme="dark"]{--bg:#161c22;--surface:#1f2830;--ink:#eef1f4;--muted:#a3afba;--line:#34404b;--gold:#e0b657;--goldbg:#e0b657;--dark:#10151a}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:28px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav li a{text-decoration:none;font-size:.95rem;color:var(--muted);white-space:nowrap}
+nav li a:hover{color:var(--ink)}
+.hero{padding:64px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(2.7rem,7.5vw,5.2rem);font-weight:800;letter-spacing:-.03em}
+.role{font-size:1.25rem;font-weight:500;margin:18px 0 10px}
+.lead{color:var(--muted);max-width:52ch;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;font-weight:700;text-decoration:none;border:2px solid var(--ink)}
+.btn.p{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--goldbg);color:#1f2830;border-color:var(--goldbg)}
+.win{background:var(--dark);border-radius:12px;overflow:hidden;box-shadow:8px 8px 0 var(--goldbg);color:var(--ondark)}
+.bar{display:flex;gap:7px;padding:12px 14px;border-bottom:1px solid #3a4651}
+.bar i{width:11px;height:11px;border-radius:50%;background:#4a5763}
+.win pre{margin:0;padding:20px 22px;font:500 .92rem/1.8 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+.k{color:#e0b657}.s{color:#9fd6b5}.c{color:#8795a1}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:36px}
+.about p{margin:0 0 14px}
+.facts{background:var(--dark);color:var(--ondark);border-radius:12px;padding:26px;align-self:start}
+.facts dt{color:var(--goldbg);font-weight:700;font-size:.9rem}
+.facts dd{margin:0 0 14px}
+.facts dd:last-child{margin:0}
+.skill{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.skill:last-child{border:0}
+.skill span{color:var(--muted);font-size:.9rem;margin-left:8px}
+.dots{display:flex;gap:5px;flex:none}
+.dots i{width:12px;height:12px;border-radius:50%;border:2px solid var(--gold)}
+.dots i.on{background:var(--gold)}
+.card h3{font-size:1.35rem;margin-bottom:6px}
+.tag{display:inline-block;font-weight:700;font-size:.85rem;padding:3px 10px;border-radius:99px;background:var(--goldbg);color:#1f2830;margin-bottom:12px}
+.tech{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.tech li{border:1px solid var(--line);border-radius:6px;padding:3px 10px;font-size:.88rem}
+.proj .card{display:flex;flex-direction:column}
+.proj p{margin:8px 0 0}
+.edu{border-left:3px solid var(--gold);padding-left:22px}
+.edu div{margin-bottom:22px}
+.edu div:last-child{margin:0}
+.edu small{color:var(--muted);font-size:.95rem}
+.edu strong{display:block;font-size:1.15rem}
+.contact{background:var(--dark);color:var(--ondark)}
+.contact h2{color:var(--ondark)}
+.contact p{max-width:55ch;margin:0 0 28px;color:#c3ccd4}
+.contact .btn{border-color:var(--ondark);color:var(--ondark)}
+.contact .btn.p{background:var(--goldbg);border-color:var(--goldbg);color:#1f2830}
+.contact .btn:hover{background:var(--ondark);border-color:var(--ondark);color:#1f2830}
+footer{padding:24px 0;text-align:center;color:var(--muted);font-size:.9rem}
+@media(max-width:780px){.hero .wrap,.about,.g2{grid-template-columns:1fr}section{padding:52px 0}.win{box-shadow:5px 5px 0 var(--goldbg)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>ZYW</b>
+<ul><li><a href="#tentang">Tentang</a></li><li><a href="#kemampuan">Kemampuan</a></li><li><a href="#proyek">Proyek</a></li><li><a href="#pendidikan">Pendidikan</a></li><li><a href="#kontak">Kontak</a></li></ul></div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<h1>Zulafa Yahya Wibowo</h1>
+<p class="role">Mahasiswa Informatika · Web Developer</p>
+<p class="lead">Saya membangun website yang rapi dan mudah dipakai, dari tampilan sampai database. Saya siap berkontribusi dan terus berkembang bersama tim profesional.</p>
+<div class="btns"><a class="btn p" href="#proyek">Lihat proyek saya</a><a class="btn" href="#kontak">Hubungi saya</a></div>
+</div>
+<div class="win" aria-label="Ringkasan profil dalam bentuk kode">
+<div class="bar"><i></i><i></i><i></i></div>
+<pre><span class="c">// profil.js</span>
+<span class="k">const</span> zulafa = {
+  kampus: <span class="s">"Universitas Amikom Yogyakarta"</span>,
+  jurusan: <span class="s">"S1 Informatika"</span>,
+  bahasa: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"PHP"</span>],
+  framework: [<span class="s">"Laravel"</span>, <span class="s">"Bootstrap"</span>],
+  database: <span class="s">"MySQL"</span>,
+  posisi: <span class="s">"Web Developer"</span>
+};</pre></div>
+</div></header>
+
+<section id="tentang"><div class="wrap">
+<h2>Tentang saya</h2>
+<div class="about">
+<div>
+<p>Saya mahasiswa S1 Informatika di Universitas Amikom Yogyakarta yang tertarik pada pengembangan website. Saya terbiasa mengerjakan proyek akademik berbasis web dengan beberapa bahasa pemrograman.</p>
+<p>Saya cepat belajar, bertanggung jawab, dan siap berkembang untuk menambah pengalaman kerja profesional.</p>
+<p>Di proyek tim, saya bekerja dengan problem solving, komunikasi yang jelas, dan manajemen waktu yang baik.</p>
+</div>
+<dl class="facts">
+<dt>Posisi yang dilamar</dt><dd>Web Developer</dd>
+<dt>Kampus</dt><dd>Universitas Amikom Yogyakarta</dd>
+<dt>Soft skills</dt><dd>Problem solving, kerja tim, manajemen waktu, komunikasi</dd>
+</dl>
+</div></div></section>
+
+<section id="kemampuan" style="background:var(--surface)"><div class="wrap">
+<h2>Kemampuan</h2>
+<div class="grid g2">
+<div class="card"><h3>Hard skills</h3>
+<div class="skill"><div>HTML &amp; CSS<span>Dasar–menengah</span></div><div class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+<div class="skill"><div>Bootstrap</div><div class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+<div class="skill"><div>PHP<span>Dasar</span></div><div class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div></div>
+<div class="skill"><div>Laravel<span>Dasar</span></div><div class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div></div>
+<div class="skill"><div>MySQL<span>Dasar</span></div><div class="dots" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div></div>
+</div>
+<div class="card"><h3>Soft skills</h3>
+<div class="skill"><div>Problem solving</div></div>
+<div class="skill"><div>Kerja tim</div></div>
+<div class="skill"><div>Manajemen waktu</div></div>
+<div class="skill"><div>Komunikasi</div></div>
+</div>
+</div></div></section>
+
+<section id="proyek"><div class="wrap proj">
+<h2>Proyek</h2>
+<div class="grid g2">
+<article class="card">
+<span class="tag">Full Stack Web Developer</span>
+<h3>Sistem Rawat Jalan Rumah Sakit</h3>
+<p>Aplikasi web untuk membantu pelayanan rawat jalan. Data pasien, dokter, dan admin dikelola dalam satu sistem terintegrasi. Saya mengembangkannya dari awal hingga akhir.</p>
+<ul class="tech"><li>HTML</li><li>CSS</li><li>PHP</li><li>Bootstrap</li></ul>
+</article>
+<article class="card">
+<span class="tag">Support Developer</span>
+<h3>MyFlyTrip</h3>
+<p>Aplikasi web untuk memesan tiket pesawat secara online. Saya membantu mengembangkan tampilan dan integrasi fitur Detail Flight dan Booking History.</p>
+<ul class="tech"><li>HTML</li><li>Tailwind CSS</li><li>PHP</li><li>Laravel</li><li>MySQL</li></ul>
+</article>
+</div>
+<p style="margin-top:22px"><a href="https://github.com/ZulafaYahyaW" target="_blank" rel="noopener">Lihat kode lengkap di GitHub</a></p>
+</div></section>
+
+<section id="pendidikan" style="background:var(--surface)"><div class="wrap">
+<h2>Pendidikan</h2>
+<div class="edu">
+<div><small>2023 – sekarang</small><strong>Universitas Amikom Yogyakarta</strong>S1 Informatika</div>
+<div><small>2020 – 2023</small><strong>SMK YAPPI Wonosari</strong></div>
+</div></div></section>
+
+<section id="kontak" class="contact"><div class="wrap">
+<h2>Mari bekerja sama</h2>
+<p>Saya terbuka untuk kesempatan bekerja sebagai Web Developer. Hubungi saya lewat email atau WhatsApp, atau lihat proyek saya di GitHub.</p>
+<div class="btns">
+<a class="btn p" href="mailto:zulafayahyawibowo@gmail.com">Kirim email</a>
+<a class="btn" href="https://wa.me/628318117072" target="_blank" rel="noopener">Chat WhatsApp</a>
+<a class="btn" href="https://github.com/ZulafaYahyaW" target="_blank" rel="noopener">Buka GitHub</a>
+</div>
+</div></section>
+
+<footer>© 2026 Zulafa Yahya Wibowo</footer>
+</body>
+</html>
